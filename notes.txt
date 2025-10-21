@@ -1,0 +1,53 @@
+<style>{`
+      
+         /* ===== Background layers using gradients & animations ===== */
+.bg-default,
+.bg-clear,
+.bg-clouds,
+.bg-rain,
+.bg-thunder,
+.bg-snow,
+.bg-mist {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+
+/* ===== Light mode gradients ===== */
+.light .bg-default { background: linear-gradient(180deg, rgba(135,206,235,0.12), rgba(255,255,255,0)); }
+.light .bg-clear { background: linear-gradient(180deg, #a0e9ff 0%, #fff 60%); }
+.light .bg-clouds { background: linear-gradient(180deg, #cfd8e3 0%, #f7f9fb 60%); }
+.light .bg-rain { background: linear-gradient(180deg, #9fb7d8 0%, #dbe9f7 60%); }
+.light .bg-thunder { background: linear-gradient(180deg, #6b7b8c 0%, #cfd8e3 60%); }
+.light .bg-snow { background: linear-gradient(180deg, #eaf6ff 0%, #ffffff 60%); }
+.light .bg-mist { background: linear-gradient(180deg, #dfe9ee 0%, #f7fbfd 60%); }
+
+/* ===== Dark mode gradients ===== */
+.dark .bg-default { background: linear-gradient(180deg, rgba(0,0,0,0.25), rgba(30,30,30,0)); }
+.dark .bg-clear { background: linear-gradient(180deg, #1e3a8a 0%, #3b82f6 60%); }
+.dark .bg-clouds { background: linear-gradient(180deg, #374151 0%, #4b5563 60%); }
+.dark .bg-rain { background: linear-gradient(180deg, #1f2937 0%, #3b4252 60%); }
+.dark .bg-thunder { background: linear-gradient(180deg, #111827 0%, #374151 60%); }
+.dark .bg-snow { background: linear-gradient(180deg, #0f172a 0%, #1e293b 60%); }
+.dark .bg-mist { background: linear-gradient(180deg, #1f2937 0%, #374151 60%); }
+
+/* ===== Sun animation ===== */
+.bg-clear { animation: sunMove 20s linear infinite; }
+@keyframes sunMove {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 100%; }
+}
+
+/* ===== Responsive font tweaks ===== */
+@media (max-width: 640px) {
+  .text-4xl { font-size: 1.6rem; }
+  .text-3xl { font-size: 1.2rem; }
+}
+
+      `}</style>
